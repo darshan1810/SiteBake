@@ -1,4 +1,5 @@
 angular.module('myApp', [
     'myApp.data',
-    'myApp.controllers'
+    'myApp.controllers',
+    'myApp.directives'
 ]);

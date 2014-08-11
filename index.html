@@ -55,7 +55,7 @@
             </div>
         </div>
     </div>
-
+    
     <div class="container">
         <div ng-controller="biocontroller">
             <div class="jumbotron" id="home">
@@ -85,9 +85,15 @@
                     </div>
                 </div>
             </div>
-
         </div>
+    </div>
+    <!-- /container -->
 
+    <div class="container" ng-controller="educationcontroller">
+        <h1 class="page-header" id="education">Education</h1>
+        <div ng-repeat="institution in education.institutions">
+            <h3 data-toggle="tooltip" data-placement="right" title="{{institution.role}}" tooltip>{{institution.name}} <small>({{institution.duration}})</small></h3>
+        </div>
     </div>
     <!-- /container -->
 
@@ -97,11 +103,18 @@
     <!-- Angular -->
     <script src="./bower_components/angular/angular.min.js"></script>
     <script src="./data/bio.js"></script>
+    <script src="./data/education.js"></script>
     <script src="./js/app.js"></script>
     <script src="./js/data.js"></script>
     <script src="./js/controllers.js"></script>
+    <script src="./js/directives.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="./bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        $.ready(function(){
+            $('[data-toggle="tooltip"]').tooltip({'placement': 'top'});
+        });
+    </script>
 </body>
 
 </html>
