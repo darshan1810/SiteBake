@@ -13,7 +13,9 @@ var _education = {
                 "Networks",
                 "Data Mining",
                 "Algorithms"
-            ]
+            ],
+            "link": "http://www.example.com",
+            "logo_link": "./data/logos/institute1.png"
         },
         {
             "name": "Institute of Technology",

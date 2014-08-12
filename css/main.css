@@ -6,7 +6,13 @@ body {
     margin-bottom: 20px;
 }
 .vcontainer {
-   min-height: 10em;
-   display: table-cell;
-   vertical-align: middle;
+    min-height: 10em;
+    display: table-cell;
+    vertical-align: middle;
+}
+.top-padded {
+    padding-top: 15px;
+}
+.logo {
+    height:100px;
 }

@@ -55,7 +55,7 @@
             </div>
         </div>
     </div>
-    
+
     <div class="container">
         <div ng-controller="biocontroller">
             <div class="jumbotron" id="home">
@@ -92,7 +92,53 @@
     <div class="container" ng-controller="educationcontroller">
         <h1 class="page-header" id="education">Education</h1>
         <div ng-repeat="institution in education.institutions">
-            <h3 data-toggle="tooltip" data-placement="right" title="{{institution.role}}" tooltip>{{institution.name}} <small>({{institution.duration}})</small></h3>
+            <h3>{{institution.name}}<span class="text-muted pull-right"><em>({{institution.duration}})</em></span></h3>
+            <div class="container top-padded">
+                <div class="row">
+                    <div class="col-sm-9">
+                        <table class="table table-bordered">
+                            <tbody>
+                                <tr ng-show="institution.degree" data-toggle="tooltip" data-placement="top" title="{{institution.role}}" tooltip>
+                                    <th>Degree</th>
+                                    <td>{{institution.degree}}</td>
+                                </tr>
+                                <tr ng-if="institution.degree == '' && institution.role">
+                                    <th>Role</th>
+                                    <td>{{institution.role}}</td>
+                                </tr>
+                                <tr ng-show="institution.major">
+                                    <th>Major</th>
+                                    <td>{{institution.major}}</td>
+                                </tr>
+                                <tr ng-show="institution.minor">
+                                    <th>Minor</th>
+                                    <td>{{institution.minor}}</td>
+                                </tr>
+                                <tr ng-show="institution.gpa">
+                                    <th>GPA</th>
+                                    <td>{{institution.gpa}}</td>
+                                </tr>
+                                <tr ng-show="institution.courses">
+                                    <th>Courses</th>
+                                    <td>{{institution.courses.join(", ")}}</td>
+                                </tr>
+                                <tr ng-show="institution.location">
+                                    <th>Location</th>
+                                    <td>{{institution.location}}</td>
+                                </tr>
+                                <tr ng-show="institution.link">
+                                    <th>Link</th>
+                                    <td><a target="_blank" ng-href="{{institution.link}}">{{institution.link}}</a></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="col-sm-3 hidden-xs">
+                        <img class="logo center-block" ng-show="institution.logo_link" ng-src="{{institution.logo_link}}" alt="logo" />
+                        {{institute.logo_link}}
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
     <!-- /container -->
@@ -111,8 +157,10 @@
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="./bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
     <script type="text/javascript">
-        $.ready(function(){
-            $('[data-toggle="tooltip"]').tooltip({'placement': 'top'});
+        $.ready(function () {
+            $('[data-toggle="tooltip"]').tooltip({
+                'placement': 'top'
+            });
         });
     </script>
 </body>
