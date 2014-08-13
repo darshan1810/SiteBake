@@ -7,3 +7,7 @@ data.factory('bio', function bioFactory() {
 data.factory('education', function educationFactory() {
     return _education;
 });
+
+data.factory('contact', function contactFactory() {
+    return _contact;
+});

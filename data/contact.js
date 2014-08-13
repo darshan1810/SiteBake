@@ -34,9 +34,9 @@ var _contact = {
         }
     ],
     "address": {
+        "name": "John Doe",
         "line1": "123 Park Avenue #500",
         "line2": "Sunset blvd",
-        "line3": "line 3",
         "city": "Los Angeles",
         "state": "CA",
         "country": "USA",

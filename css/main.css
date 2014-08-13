@@ -5,10 +5,9 @@ body {
 .navbar {
     margin-bottom: 20px;
 }
-.vcontainer {
-    min-height: 10em;
-    display: table-cell;
-    vertical-align: middle;
+.profile-pic {
+    height: 150px;
+    width: 150px;
 }
 .top-padded {
     padding-top: 15px;

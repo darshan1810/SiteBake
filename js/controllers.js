@@ -19,4 +19,8 @@ angular.module('myApp.controllers', ['myApp.data'])
     .controller('educationcontroller', ['$scope', 'education',
         function ($scope, $education) {
             $scope.education = $education;
-        }])
+    }])
+    .controller('contactcontroller', ['$scope', 'contact',
+        function ($scope, $contact) {
+            $scope.contact = $contact;
+    }]);
