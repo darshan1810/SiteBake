@@ -11,3 +11,7 @@ data.factory('education', function educationFactory() {
 data.factory('contact', function contactFactory() {
     return _contact;
 });
+
+data.factory('workexperience', function workexperienceFactory() {
+    return _workexperience;
+});

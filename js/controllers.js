@@ -23,4 +23,8 @@ angular.module('myApp.controllers', ['myApp.data'])
     .controller('contactcontroller', ['$scope', 'contact',
         function ($scope, $contact) {
             $scope.contact = $contact;
+    }])
+    .controller('workexperiencecontroller', ['$scope', 'workexperience',
+        function ($scope, $workexperience) {
+            $scope.workexperience = $workexperience;
     }]);
