@@ -6,19 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title ng-controller="biocontroller">{{bio.name}}</title>
-
     <!-- Bootstrap -->
     <link href="./bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="./css/main.css" rel="stylesheet">
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
 </head>
 
-<body role="document">
+<body role="document" ng-cloak>
     <!-- Fixed navbar -->
     <div class="navbar navbar-default navbar-fixed-top" role="navigation" ng-controller="navbarcontroller">
         <div class="container">
@@ -303,7 +296,7 @@
                 <a ng-href="{{webpresence.linkedin}}">
                     <div>
                         <h3>Linked In</h3>
-                        <img src="images/webpresence_linkedin.png" alt="Linked in" class="logo"/>
+                        <img src="images/webpresence_linkedin.png" alt="Linked in" class="logo" />
                     </div>
                 </a>
             </div>
@@ -311,7 +304,7 @@
                 <a ng-href="{{webpresence.github}}">
                     <div>
                         <h3>Github</h3>
-                        <img src="images/webpresence_github.png" alt="Github" class="logo"/>
+                        <img src="images/webpresence_github.png" alt="Github" class="logo" />
                     </div>
                 </a>
             </div>
@@ -319,7 +312,7 @@
                 <a ng-href="{{webpresence.quora}}">
                     <div>
                         <h3>Quora</h3>
-                        <img src="images/webpresence_quora.png" alt="Quora" class="logo"/>
+                        <img src="images/webpresence_quora.png" alt="Quora" class="logo" />
                     </div>
                 </a>
             </div>
@@ -327,7 +320,7 @@
                 <a ng-href="{{webpresence.facebook}}">
                     <div>
                         <h3>Facebook</h3>
-                        <img src="images/webpresence_facebook.png" alt="Facebook" class="logo"/>
+                        <img src="images/webpresence_facebook.png" alt="Facebook" class="logo" />
                     </div>
                 </a>
             </div>
@@ -335,7 +328,7 @@
                 <a ng-href="{{webpresence.twitter}}">
                     <div>
                         <h3>Twitter</h3>
-                        <img src="images/webpresence_twitter.png" alt="Twitter" class="logo"/>
+                        <img src="images/webpresence_twitter.png" alt="Twitter" class="logo" />
                     </div>
                 </a>
             </div>
@@ -343,7 +336,7 @@
                 <a ng-href="{{webpresence.googleplus}}">
                     <div>
                         <h3>Google Plus</h3>
-                        <img src="images/webpresence_googleplus.png" alt="Google Plus" class="logo"/>
+                        <img src="images/webpresence_googleplus.png" alt="Google Plus" class="logo" />
                     </div>
                 </a>
             </div>
@@ -351,8 +344,8 @@
                 <a ng-href="{{site.link}}">
                     <div>
                         <h3>{{site.title}}</h3>
-                        <img ng-show="site.logo" ng-src="{{site.logo}}" alt="Custom Site" class="logo"/>
-                        <img ng-hide="site.logo" src="./images/webpresence_placeholder_logo.png" alt="Custom Site" class="logo"/>
+                        <img ng-show="site.logo" ng-src="{{site.logo}}" alt="Custom Site" class="logo" />
+                        <img ng-hide="site.logo" src="./images/webpresence_placeholder_logo.png" alt="Custom Site" class="logo" />
                     </div>
                 </a>
             </div>
