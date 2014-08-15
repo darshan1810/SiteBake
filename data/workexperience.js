@@ -5,7 +5,7 @@ var _workexperience = {
             "companyinfo": "A mobile and cloud company",
             "jobtitle": "SDE",
             "location": "Hyderabad, India",
-            "duration": "Jan, 2010 - March 2013",
+            "duration": "Jan, 2010 - March, 2013",
             "iscurrentjob": false,
             "description": [
                 {
@@ -28,7 +28,7 @@ var _workexperience = {
             "companyinfo": "A networking company",
             "jobtitle": "SDE Intern",
             "location": "Chennai, India",
-            "duration": "December 2008 - March 2009",
+            "duration": "Dec, 2008 - March, 2009",
             "iscurrentjob": false,
             "description": [
                 {

@@ -15,3 +15,7 @@ data.factory('contact', function contactFactory() {
 data.factory('workexperience', function workexperienceFactory() {
     return _workexperience;
 });
+
+data.factory('projects', function proectsFactory() {
+    return _projects;
+});

@@ -27,4 +27,8 @@ angular.module('myApp.controllers', ['myApp.data'])
     .controller('workexperiencecontroller', ['$scope', 'workexperience',
         function ($scope, $workexperience) {
             $scope.workexperience = $workexperience;
+    }])
+    .controller('projectscontroller', ['$scope', 'projects',
+        function ($scope, $projects) {
+            $scope.projects = $projects;
     }]);

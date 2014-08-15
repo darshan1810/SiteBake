@@ -95,7 +95,7 @@
             <h3><span data-toggle="tooltip" data-placement="bottom" title="{{institution.role}}" tooltip>{{institution.name}}</span><span class="text-muted pull-right"><em>({{institution.duration}})</em></span></h3>
             <div class="container-fluid top-padded">
                 <div class="row">
-                    <div class="col-sm-8">
+                    <div class="col-sm-9">
                         <table class="table table-bordered">
                             <tbody>
                                 <tr class="success" ng-show="institution.degree">
@@ -134,7 +134,7 @@
                             </tbody>
                         </table>
                     </div>
-                    <div class="col-sm-4 hidden-xs">
+                    <div class="col-sm-3 hidden-xs">
                         <img class="logo center-block" ng-show="institution.logo_link" ng-src="{{institution.logo_link}}" alt="logo" />
                     </div>
                 </div>
@@ -149,12 +149,13 @@
             <h3><span data-toggle="tooltip" data-placement="bottom" title="{{job.companyinfo}}" tooltip>{{job.company}}</span><span class="text-muted pull-right"><em>({{job.duration}})</em></span></h3>
             <div class="container-fluid top-padded">
                 <div class="row">
-                    <div class="col-sm-8">
+                    <div class="col-sm-9">
                         <table class="table table-bordered">
                             <tbody>
                                 <tr class="success" ng-show="job.jobtitle">
                                     <th>Job Title</th>
-                                    <td><strong>{{job.jobtitle}}</strong></td>
+                                    <td><strong>{{job.jobtitle}}</strong>  <span class="label label-success" ng-show="job.iscurrentjob">Current</span>
+                                    </td>
                                 </tr>
                                 <tr ng-show="job.location">
                                     <th>Location</th>
@@ -178,7 +179,7 @@
                             </tbody>
                         </table>
                     </div>
-                    <div class="col-sm-4 hidden-xs">
+                    <div class="col-sm-3 hidden-xs">
                         <img class="logo center-block" ng-show="job.logo_link" ng-src="{{job.logo_link}}" alt="logo" />
                     </div>
                 </div>
@@ -187,6 +188,48 @@
     </div>
     <!-- /container -->
 
+    <div class="container" ng-controller="projectscontroller" id="projects">
+        <h1 class="page-header">Projects</h1>
+        <div ng-repeat="project in projects.projects">
+            <h3>{{project.name}}<span class="text-muted pull-right"><em>({{project.duration}})</em></span></h3>
+            <p class="lead text-muted" ng-show="project.tagline"><em>{{project.tagline}}</em>
+            </p>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-sm-9">
+                        <table class="table table-bordered">
+                            <tbody>
+                                <tr ng-show="project.description">
+                                    <th>Description</th>
+                                    <td>
+                                        <div ng-repeat="chunk in project.description">
+                                            <div ng-if="chunk.type === 'para'">
+                                                <p ng-show="chunk.text">{{chunk.text}}</p>
+                                            </div>
+                                            <div ng-if="chunk.type === 'bullets'">
+                                                <ul ng-if="chunk.points.length > 0">
+                                                    <li ng-repeat="point in chunk.points">{{point}}</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr ng-repeat="weblink in project.web_links">
+                                    <th>{{weblink.title}}</th>
+                                    <td><a ng-href="{{weblink.link}}" target="_blank">{{weblink.link}}</a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="col-sm-3 hidden-xs">
+                        <img class="logo center-block" ng-show="project.logo_link" ng-src="{{project.logo_link}}" alt="logo" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /container -->
 
     <div class="container" id="contact" ng-controller="contactcontroller">
         <h1 class="page-header">Contact</h1>
@@ -251,6 +294,62 @@
             </address>
         </div>
     </div>
+    <!-- /container -->
+
+    <div class="container" id="webpresence" ng-controller="webpresencecontroller">
+        <h1 class="page-header">Web Presence</h1>
+        <div class="row">
+            <div class="col-md-4 col-sm-6 col-xs-12 text-center">
+                <a>
+                    <div>
+                        <h3>Linked In</h3>
+                        <img src="images/webpresence_linkedin.png" alt="Linked in" class="logo"/>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4 col-sm-6 col-xs-12 text-center">
+                <a>
+                    <div>
+                        <h3>Github</h3>
+                        <img src="images/webpresence_github.png" alt="Github" class="logo"/>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4 col-sm-6 col-xs-12 text-center">
+                <a>
+                    <div>
+                        <h3>Quora</h3>
+                        <img src="images/webpresence_quora.png" alt="Quora" class="logo"/>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4 col-sm-6 col-xs-12 text-center">
+                <a>
+                    <div>
+                        <h3>Facebook</h3>
+                        <img src="images/webpresence_facebook.png" alt="Facebook" class="logo"/>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4 col-sm-6 col-xs-12 text-center">
+                <a>
+                    <div>
+                        <h3>Twitter</h3>
+                        <img src="images/webpresence_twitter.png" alt="Twitter" class="logo"/>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4 col-sm-6 col-xs-12 text-center">
+                <a>
+                    <div>
+                        <h3>Google Plus</h3>
+                        <img src="images/webpresence_googleplus.png" alt="Google Plus" class="logo"/>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- /container -->
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="./bower_components/jquery/dist/jquery.min.js"></script>
@@ -260,6 +359,7 @@
     <script src="./data/education.js"></script>
     <script src="./data/contact.js"></script>
     <script src="./data/workexperience.js"></script>
+    <script src="./data/projects.js"></script>
     <script src="./js/app.js"></script>
     <script src="./js/data.js"></script>
     <script src="./js/controllers.js"></script>
