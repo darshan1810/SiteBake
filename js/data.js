@@ -16,6 +16,10 @@ data.factory('workexperience', function workexperienceFactory() {
     return _workexperience;
 });
 
-data.factory('projects', function proectsFactory() {
+data.factory('projects', function projectsFactory() {
     return _projects;
+});
+
+data.factory('webpresence', function webpresenceFactory() {
+    return _webpresence;
 });

@@ -299,51 +299,60 @@
     <div class="container" id="webpresence" ng-controller="webpresencecontroller">
         <h1 class="page-header">Web Presence</h1>
         <div class="row">
-            <div class="col-md-4 col-sm-6 col-xs-12 text-center">
-                <a>
+            <div class="col-md-4 col-sm-6 col-xs-12 text-center webpresence-entry" ng-show="webpresence.linkedin">
+                <a ng-href="{{webpresence.linkedin}}">
                     <div>
                         <h3>Linked In</h3>
                         <img src="images/webpresence_linkedin.png" alt="Linked in" class="logo"/>
                     </div>
                 </a>
             </div>
-            <div class="col-md-4 col-sm-6 col-xs-12 text-center">
-                <a>
+            <div class="col-md-4 col-sm-6 col-xs-12 text-center webpresence-entry" ng-show="webpresence.github">
+                <a ng-href="{{webpresence.github}}">
                     <div>
                         <h3>Github</h3>
                         <img src="images/webpresence_github.png" alt="Github" class="logo"/>
                     </div>
                 </a>
             </div>
-            <div class="col-md-4 col-sm-6 col-xs-12 text-center">
-                <a>
+            <div class="col-md-4 col-sm-6 col-xs-12 text-center webpresence-entry" ng-show="webpresence.quora">
+                <a ng-href="{{webpresence.quora}}">
                     <div>
                         <h3>Quora</h3>
                         <img src="images/webpresence_quora.png" alt="Quora" class="logo"/>
                     </div>
                 </a>
             </div>
-            <div class="col-md-4 col-sm-6 col-xs-12 text-center">
-                <a>
+            <div class="col-md-4 col-sm-6 col-xs-12 text-center webpresence-entry" ng-show="webpresence.facebook">
+                <a ng-href="{{webpresence.facebook}}">
                     <div>
                         <h3>Facebook</h3>
                         <img src="images/webpresence_facebook.png" alt="Facebook" class="logo"/>
                     </div>
                 </a>
             </div>
-            <div class="col-md-4 col-sm-6 col-xs-12 text-center">
-                <a>
+            <div class="col-md-4 col-sm-6 col-xs-12 text-center webpresence-entry" ng-show="webpresence.twitter">
+                <a ng-href="{{webpresence.twitter}}">
                     <div>
                         <h3>Twitter</h3>
                         <img src="images/webpresence_twitter.png" alt="Twitter" class="logo"/>
                     </div>
                 </a>
             </div>
-            <div class="col-md-4 col-sm-6 col-xs-12 text-center">
-                <a>
+            <div class="col-md-4 col-sm-6 col-xs-12 text-center webpresence-entry" ng-show="webpresence.googleplus">
+                <a ng-href="{{webpresence.googleplus}}">
                     <div>
                         <h3>Google Plus</h3>
                         <img src="images/webpresence_googleplus.png" alt="Google Plus" class="logo"/>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4 col-sm-6 col-xs-12 text-center webpresence-entry" ng-repeat="site in webpresence.custom">
+                <a ng-href="{{site.link}}">
+                    <div>
+                        <h3>{{site.title}}</h3>
+                        <img ng-show="site.logo" ng-src="{{site.logo}}" alt="Custom Site" class="logo"/>
+                        <img ng-hide="site.logo" src="./images/webpresence_placeholder_logo.png" alt="Custom Site" class="logo"/>
                     </div>
                 </a>
             </div>
@@ -360,6 +369,7 @@
     <script src="./data/contact.js"></script>
     <script src="./data/workexperience.js"></script>
     <script src="./data/projects.js"></script>
+    <script src="./data/webpresence.js"></script>
     <script src="./js/app.js"></script>
     <script src="./js/data.js"></script>
     <script src="./js/controllers.js"></script>

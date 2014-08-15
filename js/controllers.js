@@ -31,4 +31,8 @@ angular.module('myApp.controllers', ['myApp.data'])
     .controller('projectscontroller', ['$scope', 'projects',
         function ($scope, $projects) {
             $scope.projects = $projects;
+    }])
+    .controller('webpresencecontroller', ['$scope', 'webpresence',
+        function ($scope, $webpresence) {
+            $scope.webpresence = $webpresence;
     }]);

@@ -1,7 +1,7 @@
 body {
     min-height: 2000px;
     padding-top: 70px;
-    padding-bottom: 70px;
+    padding-bottom: 40px;
 }
 .navbar {
     margin-bottom: 20px;
@@ -14,5 +14,8 @@ body {
     padding-top: 15px;
 }
 .logo {
-    height:100px;
+    height: 100px;
+}
+.webpresence-entry {
+    padding-bottom: 30px;
 }
