@@ -10,7 +10,9 @@ Can be customized by replacing the provided bootstrap.min.css file with differen
 ###Live Demo
 You can see a live demo of the generted site with dummy data [here](http://sumitgouthaman.github.io/PersonalHomepage)  
 ###JSON File structures
-[data/bio.js](./documentation/bio.md)
+[data/bio.js](./documentation/bio.md)  
+[data/education.js](./documentation/education.md)  
+  
 -- More config file structures coming soon --
 ###Built with
 * Angular JS
