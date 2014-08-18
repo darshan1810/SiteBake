@@ -1,4 +1,4 @@
-data/education.md
+data/education.js
 =================
 The expected structure of education.js is described below:  
   
