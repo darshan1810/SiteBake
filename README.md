@@ -13,6 +13,7 @@ You can see a live demo of the generted site with dummy data [here](http://sumit
 [data/bio.js](./documentation/bio.md)  
 [data/education.js](./documentation/education.md)  
 [data/workexperience.js](./documentation/workexperience.md)  
+[data/projects.js](./documentation/projects.md)  
   
 -- More config file structures coming soon --
 ###Built with
