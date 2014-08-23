@@ -16,6 +16,9 @@ body {
 .top-padded {
     padding-top: 15px;
 }
+.top-padded-less {
+    padding-top: 10px;
+}
 .logo {
     height: 100px;
 }

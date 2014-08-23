@@ -24,13 +24,15 @@ var _skills = {
                 "CSS3",
                 "JavaScript"
             ],
-            "sub_category": {
-                "sub_category_name": "Frameworks",
-                "topics": [
-                    "AngularJS",
-                    "BootStrap"
-                ]
-            }
+            "sub_categories": [
+                {
+                    "sub_category_name": "Frameworks",
+                    "topics": [
+                        "AngularJS",
+                        "BootStrap"
+                    ]
+                }
+            ]
         }
     ]
 };

@@ -28,6 +28,8 @@
                 <ul class="nav navbar-nav">
                     <li><a href="#">Home</a>
                     </li>
+                    <li><a href="#skills">Skills</a>
+                    </li>
                     <li><a href="#education">Education</a>
                     </li>
                     <li><a href="#work">Work</a>
@@ -79,6 +81,25 @@
                 </div>
             </div>
         </div>
+    </div>
+    <!-- /container -->
+    
+    <div class="container" ng-controller="skillscontroller" id="skills" ng-show="skills.categories">
+        <h1 class="page-header">Skills</h1>
+        <table class="table table-bordered">
+            <tbody>
+                <tr ng-repeat="category in skills.categories">
+                    <th>{{category.category_name}}</th>
+                    <td>
+                        {{category.topics.join(", ")}}
+                        <div class="top-padded-less" ng-repeat="subcat in category.sub_categories">
+                            <strong>{{subcat.sub_category_name}}: </strong>
+                            {{subcat.topics.join(", ")}}
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
     </div>
     <!-- /container -->
 
@@ -358,6 +379,7 @@
     <!-- Angular -->
     <script src="./bower_components/angular/angular.min.js"></script>
     <script src="./data/bio.js"></script>
+    <script src="./data/skills.js"></script>
     <script src="./data/education.js"></script>
     <script src="./data/contact.js"></script>
     <script src="./data/workexperience.js"></script>

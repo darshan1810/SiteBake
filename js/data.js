@@ -23,3 +23,7 @@ data.factory('projects', function projectsFactory() {
 data.factory('webpresence', function webpresenceFactory() {
     return _webpresence;
 });
+
+data.factory('skills', function skillsFactory() {
+    return _skills;
+});

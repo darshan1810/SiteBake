@@ -35,4 +35,8 @@ angular.module('myApp.controllers', ['myApp.data'])
     .controller('webpresencecontroller', ['$scope', 'webpresence',
         function ($scope, $webpresence) {
             $scope.webpresence = $webpresence;
+    }])
+    .controller('skillscontroller', ['$scope', 'skills',
+        function ($scope, $skills) {
+            $scope.skills = $skills;
     }]);
