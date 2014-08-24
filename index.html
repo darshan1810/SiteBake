@@ -83,23 +83,29 @@
         </div>
     </div>
     <!-- /container -->
-    
+
     <div class="container" ng-controller="skillscontroller" id="skills" ng-show="skills.categories">
         <h1 class="page-header">Skills</h1>
-        <table class="table table-bordered">
-            <tbody>
-                <tr ng-repeat="category in skills.categories">
-                    <th>{{category.category_name}}</th>
-                    <td>
-                        {{category.topics.join(", ")}}
-                        <div class="top-padded-less" ng-repeat="subcat in category.sub_categories">
-                            <strong>{{subcat.sub_category_name}}: </strong>
-                            {{subcat.topics.join(", ")}}
-                        </div>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
+        <div ng-show="skills.areas_of_interest">
+            <strong>Areas of interest: </strong>
+            <em>{{skills.areas_of_interest.join(", ")}}</em>
+        </div>
+        <div class="top-padded">
+            <table class="table table-bordered">
+                <tbody>
+                    <tr ng-repeat="category in skills.categories">
+                        <th>{{category.category_name}}</th>
+                        <td>
+                            {{category.topics.join(", ")}}
+                            <div class="top-padded-less" ng-repeat="subcat in category.sub_categories">
+                                <strong>{{subcat.sub_category_name}}: </strong>
+                                {{subcat.topics.join(", ")}}
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </div>
     <!-- /container -->
 

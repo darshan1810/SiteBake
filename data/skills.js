@@ -34,5 +34,10 @@ var _skills = {
                 }
             ]
         }
+    ],
+    "areas_of_interest": [
+        "Programming",
+        "Machine learning",
+        "AI"
     ]
 };
