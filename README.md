@@ -11,6 +11,7 @@ Can be customized by replacing the provided bootstrap.min.css file with differen
 You can see a live demo of the generted site with dummy data [here](http://sumitgouthaman.github.io/PersonalHomepage)  
 ###JSON File structures
 [data/bio.js](./documentation/bio.md)  
+[data/skills.js](./documentation/skills.md)  
 [data/education.js](./documentation/education.md)  
 [data/workexperience.js](./documentation/workexperience.md)  
 [data/projects.js](./documentation/projects.md)  
