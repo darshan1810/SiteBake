@@ -309,8 +309,10 @@
                 <strong>{{contact.address.name}}</strong><br>
                 {{contact.address.line1}}<br/>
                 {{contact.address.line2}}<br/>
-                {{contact.address.city}}<span ng-if="contact.address.city && contact.address.state">, </span>{{contact.address.state}}<br/>
-                {{contact.address.country}}<br/>
+                {{contact.address.city}}<span ng-if="contact.address.city && contact.address.state">, </span>{{contact.address.state}}
+                <span ng-show="contact.address.pincode"> - {{contact.address.pincode}}</span>
+                <br/>
+                <span ng-if="contact.address.options.show_country">{{contact.address.country}}</span><br/>
             </address>
         </div>
     </div>
