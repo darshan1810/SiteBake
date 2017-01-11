@@ -5,15 +5,16 @@ var _skills = {
             "topics": [
                 "C++",
                 "C",
+                "Python",
                 "Java",
-                "Python"
+                "ProLog",
+                "XSB",
             ]
         },
         {
             "category_name": "Database technologies",
             "topics": [
                 "MySQL",
-                "Google Datastore (with Objectify)",
                 "SQL Server"
             ]
         },
@@ -22,13 +23,13 @@ var _skills = {
             "topics": [
                 "HTML5",
                 "CSS3",
-                "JavaScript"
+                "JavaScript",
             ],
             "sub_categories": [
                 {
                     "sub_category_name": "Frameworks",
                     "topics": [
-                        "AngularJS",
+                        "Django",
                         "BootStrap"
                     ]
                 }
@@ -36,7 +37,9 @@ var _skills = {
         }
     ],
     "areas_of_interest": [
-        "Programming",
+        "Systems",
+        "Security",
+        "Algorithms",
         "Machine learning",
         "AI"
     ]

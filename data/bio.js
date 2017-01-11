@@ -1,25 +1,19 @@
 var _bio = {
-    "name": "John Doe",
+    "name": "Darshan Godhia",
     "photo_link": "./data/photo.jpg",
-    "tagline": "Your tagline here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. ",
+    "tagline": "\"Everyone knows that debugging is twice as hard as writing a program in the first place. " +
+    "So if you're as clever as you can be when you write it, how will you ever debug it?\" " +
+    " - Brian Kernighan",
     "aboutme": [
         {
             "type": "para",
-            "text": "Mauris tempus purus accumsan magna porta dapibus. Phasellus in sapien vel sapien tincidunt mattis. Cras mattis tristique tellus, sit amet pulvinar neque feugiat vel. Sed adipiscing lobortis fringilla. Nullam facilisis magna ac dolor vulputate, non sodales nulla aliquet. Vivamus magna libero, euismod eget ligula non, egestas dictum tortor. Vivamus tempus lobortis turpis sed tempor."
-        },
-        {
-            "type": "bullets",
-            "points": [
-                "orem ipsum dolor sit amet, consectetur adipiscing elit. Proin ut sollicitudin ante, vitae pellentesque orci.",
-                "Mauris tempus purus accumsan magna porta dapibus. Phasellus in sapien vel sapien tincidunt mattis.",
-                "Vivamus ultrices leo quis adipiscing rhoncus. Suspendisse sit amet sollicitudin velit, in pretium orci."
-            ]
+            "text": "I am a graduate student at SUNY Stony Brook, NY, pursuing Masters of Science in Computer Science."
         },
         {
             "type": "para",
-            "text": "Mauris tempus purus accumsan magna porta dapibus. Phasellus in sapien vel sapien tincidunt mattis. Cras mattis tristique tellus, sit amet pulvinar neque feugiat vel. Sed adipiscing lobortis fringilla. Nullam facilisis magna ac dolor vulputate, non sodales nulla aliquet. Vivamus magna libero, euismod eget ligula non, egestas dictum tortor."
+            "text": "I am a part of the File Systems and Storage Lab. I will be involved in research projects in the " +
+            "domain of Storage Systems under the guidance of Prof. Erez Zadok."
         }
     ],
-    "resumelink": "http://example.com/resume",
-    "default_email": "mail@example.com"
+    // "default_email": "dgodhia AT cs DOT stonybrook DOT edu"
 };

@@ -1,47 +1,54 @@
 var _education = {
     "institutions": [
         {
-            "name": "University of Metropolis",
-            "role": "Graduate school",
+            "name": "SUNY Stony Brook University",
+            "role": "College of Engineering and Applied Sciences",
             "degree": "Master of Science",
             "major": "Computer Science",
-            "minor": "",
-            "duration": "September, 2014 - Present",
-            "gpa": "3.7",
-            "location": "Los Angeles, CA",
+            "duration": "August, 2016 - Present",
+            "gpa": "3.75*",
+            "location": "Stony Brook, NY, USA",
             "courses": [
-                "Networks",
-                "Data Mining",
-                "Algorithms"
+                "Analysis of Algorithms",
+                "Operating Systems",
+                "Offensive Security",
+                "Programming Complex Algorithms"
             ],
-            "link": "http://www.example.com",
-            "logo_link": "./data/logos/institute1.png"
+            "link": "http://cs.stonybrook.edu",
+            "logo_link": "./data/logos/sbu.jpg"
         },
-        {
-            "name": "Institute of Technology",
-            "role": "Undergraduate institution",
+        { 
+            "name": "University of Mumbai",
+            "role": "Sardar Patel Institute of Technology",
             "degree": "Bachelor of Engineering",
             "major": "Computer Engineering",
-            "minor": "",
-            "duration": "July, 2010 - July, 2014",
-            "gpa": "3.9",
+            "duration": "August, 2012 - June, 2016",
+            "gpa": "9.07/10",
             "location": "Mumbai, India",
             "courses": [
-                "Databases",
-                "Operating Systems",
-                "Algorithms"
-            ]
+                "Machine Learning",
+                "Soft Computing",
+                "Data Structures",
+                "Analysis of Algorithms",
+                "Distributed Databases",
+                "Cryptography and System Security",
+                "Network Threats and Attacks",
+                "Artificial Intelligence",
+                "Data Warehousing and Management"
+            ],
+            "logo_link": "./data/logos/mu.png"
         },
         {
-            "name": "Sprinfield High",
+            "name": "Pace Junior Science College",
             "role": "High school",
             "degree": "",
             "major": "",
             "minor": "Computer Science",
-            "duration": "May, 2008 - May, 2010",
-            "gpa": "91 %",
+            "duration": "May, 2010 - May, 2012",
+            "gpa": "83 %",
             "location": "Mumbai, India",
-            "courses": []
+            "courses": [],
+            "logo_link": "./data/logos/pace.jpeg"
         }
     ]
 };

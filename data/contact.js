@@ -2,43 +2,35 @@ var _contact = {
     "phones": [
         {
             "name": "Personal",
-            "number": "+1 (123) 345 6789"
-        },
-        {
-            "name": "Work",
-            "number": "+1 (987) 654 3210"
+            "number": "+1 (631) 913 5492"
         }
     ],
     "emails": [
         {
             "name": "Personal",
-            "email": "johndoe@example.com"
+            "email": "darshan1810 PLUS web AT gmail.com"
         },
         {
             "name": "Academic",
-            "email": "johndoe@university.edu"
-        },
-        {
-            "name": "Work",
-            "email": "johndoe@office.com"
+            "email": "dgodhia PLUS web AT cs DOT stonybrook DOT edu"
         }
     ],
     "websites": [
         {
             "name": "Personal homepage",
-            "link": "http://www.johndoe.com"
+            "link": "http://www.darshangodhia.com"
         },
         {
             "name": "Portfolio",
-            "link": "http://www.johndoe.com/portfolio"
+            "link": "http://www.linkedin.com/TODOportfolio"
         }
     ],
     "address": {
-        "name": "John Doe",
-        "line1": "123 Park Avenue #500",
-        "line2": "Sunset blvd",
-        "city": "Los Angeles",
-        "state": "CA",
+        "name": "Darshan Godhia",
+        "line1": "700 Health Sciences Drive",
+        "line2": "Chapin F-2096A",
+        "city": "Stony Brook",
+        "state": "NY",
         "country": "USA",
         "options": {
             "show_country": false,
