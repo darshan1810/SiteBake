@@ -4,13 +4,14 @@
 <head>
     <meta charset="utf-8">
 
-    <!--TITLE OF THE SITE-->
+    <!--Title of the site-->
     <title>Darshan Godhia | MS in CS | File Systems Lab | Stony Brook University</title>
 
-    <!--META TAG-->
+    <!--Meta tag-->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="I am a Computer Science Graduate Student and Stony Brook University, interested in Systems, Securtiy, Algorithms, Machine Learning and AI">
+    <meta name="description"
+          content="I am a Computer Science Graduate Student and Stony Brook University, interested in Systems, Securtiy, Algorithms, Machine Learning and AI">
     <meta name="author" content="Darshan Godhia, forked from Sumit Gouthaman">
 
     <!-- Bootstrap -->
@@ -39,8 +40,6 @@
                 </li>
                 <li><a href="#education">Education</a>
                 </li>
-                <!-- <li><a href="#work">Work</a> -->
-                <!-- </li> -->
                 <li><a href="#projects">Projects</a>
                 </li>
                 <li><a href="#contact">Contact</a>
@@ -173,52 +172,6 @@
 </div>
 <!-- /container -->
 
-
-<!-- <div class="container" ng-controller="workexperiencecontroller" id="work">
-    <h1 class="page-header">Work</h1>
-    <div ng-repeat="job in workexperience.jobs">
-        <h3><span data-toggle="tooltip" data-placement="bottom" title="{{job.companyinfo}}" tooltip>{{job.company}}</span><span class="text-muted pull-right"><em>({{job.duration}})</em></span></h3>
-        <div class="container-fluid top-padded">
-            <div class="row">
-                <div class="col-sm-9">
-                    <table class="table table-bordered">
-                        <tbody>
-                            <tr class="success" ng-show="job.jobtitle">
-                                <th>Job Title</th>
-                                <td><strong>{{job.jobtitle}}</strong>  <span class="label label-success" ng-show="job.iscurrentjob">Current</span>
-                                </td>
-                            </tr>
-                            <tr ng-show="job.location">
-                                <th>Location</th>
-                                <td>{{job.location}}</td>
-                            </tr>
-                            <tr ng-show="job.description">
-                                <th>Description</th>
-                                <td>
-                                    <div ng-repeat="chunk in job.description">
-                                        <div ng-if="chunk.type === 'para'">
-                                            <p ng-show="chunk.text">{{chunk.text}}</p>
-                                        </div>
-                                        <div ng-if="chunk.type === 'bullets'">
-                                            <ul ng-if="chunk.points.length > 0">
-                                                <li ng-repeat="point in chunk.points">{{point}}</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-                <div class="col-sm-3 hidden-xs">
-                    <img class="logo center-block" ng-show="job.logo_link" ng-src="{{job.logo_link}}" alt="logo" />
-                </div>
-            </div>
-        </div>
-    </div>
-</div> -->
-<!-- /container -->
-
 <div class="container" ng-controller="projectscontroller" id="projects">
     <h1 class="page-header">Projects</h1>
     <div ng-repeat="project in projects.projects">
@@ -299,35 +252,7 @@
             </div>
         </div>
         <!---->
-        <!--<div class="col-md-4">-->
-            <!--<div ng-show="contact.websites">-->
-                <!--<h3>Websites</h3>-->
-                <!--<div class="container-fluid top-padded">-->
-                    <!--<table class="table table-bordered">-->
-                        <!--<tbody>-->
-                        <!--<tr ng-repeat="website in contact.websites">-->
-                            <!--<th>{{website.name}}</th>-->
-                            <!--<td><a target="_blank" ng-href="{{website.link}}">{{website.link}}</a>-->
-                            <!--</td>-->
-                        <!--</tr>-->
-                        <!--</tbody>-->
-                    <!--</table>-->
-                <!--</div>-->
-            <!--</div>-->
-        <!--</div>-->
     </div>
-    <!--<div ng-show="contact.address">-->
-        <!--<h3>Address</h3>-->
-        <!--<address>-->
-            <!--<strong>{{contact.address.name}}</strong><br>-->
-            <!--{{contact.address.line1}}<br/>-->
-            <!--{{contact.address.line2}}<br/>-->
-            <!--{{contact.address.city}}<span ng-if="contact.address.city && contact.address.state">, </span>{{contact.address.state}}-->
-            <!--<span ng-show="contact.address.pincode"> - {{contact.address.pincode}}</span>-->
-            <!--<br/>-->
-            <!--<span ng-if="contact.address.options.show_country">{{contact.address.country}}</span><br/>-->
-        <!--</address>-->
-    <!--</div>-->
 </div>
 <!-- /container -->
 

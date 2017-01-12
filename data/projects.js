@@ -19,17 +19,6 @@ var _projects = {
                 }
             ],
             "duration": "November, 2016 - December, 2016",
-            // "web_links": [
-            //     {
-            //         "title": "Github repository",
-            //         "link": "http://github.com/#"
-            //     },
-            //     {
-            //         "title": "Live demo",
-            //         "link": "http://example.com/#"
-            //     }
-            // ],
-            // "logo_link": "./data/logos/company1.gif"
         },
         {
             "name": "Automated ROP chain payload generator and tester",
@@ -50,17 +39,6 @@ var _projects = {
                 }
             ],
             "duration": "August, 2016 - November, 2016",
-            // "web_links": [
-            //     {
-            //         "title": "Github repository",
-            //         "link": "http://github.com/#"
-            //     },
-            //     {
-            //         "title": "Live demo",
-            //         "link": "http://example.com/#"
-            //     }
-            // ],
-            // "logo_link": "./data/logos/company1.gif"
         },
         {
             "name": "Election Result Prediction using Data Mining and Sentiment Analysis",
@@ -81,17 +59,6 @@ var _projects = {
                 }
             ],
             "duration": "August, 2015 - March, 2016",
-            // "web_links": [
-            //     {
-            //         "title": "Github repository",
-            //         "link": "http://github.com/#"
-            //     },
-            //     {
-            //         "title": "Live demo",
-            //         "link": "http://example.com/#"
-            //     }
-            // ],
-            // "logo_link": "./data/logos/company1.gif"
         },
         {
             "name": "KaliDroid",
@@ -112,17 +79,52 @@ var _projects = {
                 }
             ],
             "duration": "July, 2013 - Oct, 2013",
-            // "web_links": [
-            //     {
-            //         "title": "Github repository",
-            //         "link": "http://github.com/#"
-            //     },
-            //     {
-            //         "title": "Live demo",
-            //         "link": "http://example.com/#"
-            //     }
-            // ],
-            // "logo_link": ""
-        }
+        },
+        {
+            "name": "Dermibot",
+            "tagline": "Skin disease detection Android application using machine learning.",
+            "description": [
+                {
+                    "type": "para",
+                    "text": "Developed an Android application to take text based parameters and click pictures as" +
+                    " image inputs to predict likelihood of skin diseases, aimed at usage in rural India where" +
+                    " medical resources are hard to find."
+                },
+                {
+                    "type": "bullets",
+                    "points": [
+                        "Trained a backpropagation neural network on text based input parameters; the disease symptoms",
+                        "Chained an online image classifier API - Metamind to classify clicked pictures",
+                        "Fetched results of both the text and image based classifiers and combined their predictions to" +
+                        "generate disease prediction reports",
+                        "The application is undergoing clinical trials at Seth GS Medical College, Mumbai"
+                    ]
+                }
+            ],
+            "duration": "June, 2015 - December, 2015",
+        },
+        {
+            "name": "Patient Information System",
+            "tagline": "Patient Information System for Skin & Vitiligo Department, KEM Hospital, Mumbai",
+            "description": [
+                {
+                    "type": "para",
+                    "text": "Developed an Android application to take text based parameters and click pictures as" +
+                    " image inputs to predict likelihood of skin diseases, aimed at usage in rural India where" +
+                    " medical resources are hard to find."
+                },
+                {
+                    "type": "bullets",
+                    "points": [
+                        "Trained a backpropagation neural network on text based input parameters - disease symptoms",
+                        "Chained an online image classifier API - Metamind to classify clicked pictures",
+                        "Fetched results of both the text and image based classifiers and combined their predictions to" +
+                        "generate disease prediction reports",
+                        "The application is undergoing clinical trials at Seth GS Medical College, Mumbai"
+                    ]
+                }
+            ],
+            "duration": "June, 2015 - December, 2015",
+        },
     ]
 };
