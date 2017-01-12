@@ -127,28 +127,5 @@ var _projects = {
             ],
             "duration": "November, 2015 - January, 2016",
         },
-        {
-            "name": "Patient Information System",
-            "tagline": "Patient Information System for Skin & Vitiligo Department, KEM Hospital, Mumbai",
-            "description": [
-                {
-                    "type": "para",
-                    "text": "Developed an Android application to take text based parameters and click pictures as" +
-                    " image inputs to predict likelihood of skin diseases, aimed at usage in rural India where" +
-                    " medical resources are hard to find."
-                },
-                {
-                    "type": "bullets",
-                    "points": [
-                        "Trained a backpropagation neural network on text based input parameters - disease symptoms",
-                        "Chained an online image classifier API - Metamind to classify clicked pictures",
-                        "Fetched results of both the text and image based classifiers and combined their predictions to" +
-                        "generate disease prediction reports",
-                        "The application is undergoing clinical trials at Seth GS Medical College, Mumbai"
-                    ]
-                }
-            ],
-            "duration": "November, 2015 - January, 2016",
-        },
     ]
 };
