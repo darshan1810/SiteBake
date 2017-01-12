@@ -8,8 +8,8 @@ data.factory('education', function educationFactory() {
     return _education;
 });
 
-data.factory('contact', function contactFactory() {
-    return _contact;
+data.factory('extra', function extraFactory() {
+    return _extra;
 });
 
 data.factory('workexperience', function workexperienceFactory() {

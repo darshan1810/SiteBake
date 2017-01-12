@@ -10,8 +10,7 @@
     <!--Meta tag-->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description"
-          content="I am a Computer Science Graduate Student and Stony Brook University, interested in Systems, Securtiy, Algorithms, Machine Learning and AI">
+    <meta name="description" content="I am a Computer Science Graduate Student and Stony Brook University, interested in Systems, Securtiy, Algorithms, Machine Learning and AI">
     <meta name="author" content="Darshan Godhia, forked from Sumit Gouthaman">
 
     <!-- Bootstrap -->
@@ -42,7 +41,7 @@
                 </li>
                 <li><a href="#projects">Projects</a>
                 </li>
-                <li><a href="#contact">Contact</a>
+                <li><a href="#extra">Extra</a>
                 </li>
                 <li><a href="#webpresence">Web Presence</a>
                 </li>
@@ -216,42 +215,53 @@
 </div>
 <!-- /container -->
 
-<div class="container" id="contact" ng-controller="contactcontroller">
-    <h1 class="page-header">Contact</h1>
+<div class="container" id="extra" ng-controller="extracontroller">
+    <h1 class="page-header">Extra</h1>
     <div class="row">
-        <div class="col-md-6">
-            <div ng-show="contact.phones">
+        <div class="col-sm-9">
+            <div ng-show="extra.icpc">
                 <div class="container-fluid top-padded">
-                    <h3>Phones</h3>
+                    <h3>ACM - ICPC</h3>
                     <table class="table table-bordered">
                         <tbody>
-                        <tr ng-repeat="phone in contact.phones">
-                            <th>{{phone.name}}</th>
-                            <td><a ng-href="tel:{{phone.number}}">{{phone.number}}</a>
-                            </td>
+                        <tr>
+                            <th>Year</th>
+                            <th>Region</th>
+                            <th>Rank</th>
+                        </tr>
+                        <tr ng-repeat="contest in extra.icpc">
+                            <th>{{contest.year}}</th>
+                            <td>{{contest.region}}</td>
+                            <td>{{contest.rank}}</td>
                         </tr>
                         </tbody>
                     </table>
                 </div>
             </div>
         </div>
-        <div class="col-md-6">
-            <div ng-show="contact.emails">
+    </div>
+    <div class="row">
+        <div class="col-sm-9">
+            <div ng-show="extra.icpc">
                 <div class="container-fluid top-padded">
-                    <h3>Emails</h3>
+                    <h3>ACM - ICPC</h3>
                     <table class="table table-bordered">
                         <tbody>
-                        <tr ng-repeat="email in contact.emails">
-                            <th>{{email.name}}</th>
-                            <td><a ng-href="mailto:{{email.email}}">{{email.email}}</a>
-                            </td>
+                        <tr>
+                            <th>Year</th>
+                            <th>Region</th>
+                            <th>Rank</th>
+                        </tr>
+                        <tr ng-repeat="contest in extra.icpc">
+                            <th>{{contest.year}}</th>
+                            <td>{{contest.region}}</td>
+                            <td>{{contest.rank}}</td>
                         </tr>
                         </tbody>
                     </table>
                 </div>
             </div>
         </div>
-        <!---->
     </div>
 </div>
 <!-- /container -->
@@ -328,7 +338,7 @@
 <script src="./data/bio.js"></script>
 <script src="./data/skills.js"></script>
 <script src="./data/education.js"></script>
-<script src="./data/contact.js"></script>
+<script src="./data/extra.js"></script>
 <script src="./data/workexperience.js"></script>
 <script src="./data/projects.js"></script>
 <script src="./data/webpresence.js"></script>

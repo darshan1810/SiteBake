@@ -93,6 +93,7 @@ var _projects = {
                 {
                     "type": "bullets",
                     "points": [
+                        "Collected images from visiting patients at SGS Medical college",
                         "Trained a backpropagation neural network on text based input parameters; the disease symptoms",
                         "Chained an online image classifier API - Metamind to classify clicked pictures",
                         "Fetched results of both the text and image based classifiers and combined their predictions to" +
@@ -102,6 +103,29 @@ var _projects = {
                 }
             ],
             "duration": "June, 2015 - December, 2015",
+        },
+        {
+            "name": "Patient Information System",
+            "tagline": "Patient Information System for Skin & Vitiligo Department, KEM Hospital, Mumbai",
+            "description": [
+                {
+                    "type": "para",
+                    "text": "Developed and deployed an Intranet portal to collect and store patient information in KEM" +
+                    " Hospital in Mumbai."
+                },
+                {
+                    "type": "bullets",
+                    "points": [
+                        "Visited the deployment site to collect requiremnts",
+                        "Designed the front-end and back-end of an information system web portal using Django" +
+                        " framework",
+                        "Deployed the portal on KEM Hospital's intranet",
+                        "Mentored junior students in Web development, and trained them to provide maintenance" +
+                        " for the portal"
+                    ]
+                }
+            ],
+            "duration": "November, 2015 - January, 2016",
         },
         {
             "name": "Patient Information System",
@@ -124,7 +148,7 @@ var _projects = {
                     ]
                 }
             ],
-            "duration": "June, 2015 - December, 2015",
+            "duration": "November, 2015 - January, 2016",
         },
     ]
 };

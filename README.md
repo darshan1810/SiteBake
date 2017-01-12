@@ -15,7 +15,7 @@ You can see a live demo of the generted site with dummy data [here](http://sumit
 [data/education.js](./documentation/education.md)  
 [data/workexperience.js](./documentation/workexperience.md)  
 [data/projects.js](./documentation/projects.md)  
-[data/contact.js](./documentation/contact.md)  
+[data/extra.js](./documentation/contact.md)  
 [data/webpresence.js](./documentation/webpresence.md)  
   
 -- More config file structures coming soon --

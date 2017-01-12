@@ -1,6 +1,6 @@
-data/contact.js
+data/extra.js
 ================
-The expected structure of contact.js is described below:  
+The expected structure of extra.js is described below:  
   
 All fields in the below configuration object are Optional.  
   

@@ -20,9 +20,9 @@ angular.module('myApp.controllers', ['myApp.data'])
         function ($scope, $education) {
             $scope.education = $education;
     }])
-    .controller('contactcontroller', ['$scope', 'contact',
-        function ($scope, $contact) {
-            $scope.contact = $contact;
+    .controller('extracontroller', ['$scope', 'extra',
+        function ($scope, $extra) {
+            $scope.extra = $extra;
     }])
     .controller('workexperiencecontroller', ['$scope', 'workexperience',
         function ($scope, $workexperience) {
