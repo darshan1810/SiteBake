@@ -19,342 +19,341 @@
 </head>
 
 <body role="document" ng-cloak>
-<!-- Fixed navbar -->
-<div class="navbar navbar-default navbar-fixed-top" role="navigation" ng-controller="navbarcontroller">
-    <div class="container">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+    <!-- Fixed navbar -->
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation" ng-controller="navbarcontroller">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                 <span class="sr-only">Toggle navigation</span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand visible-xs" href="#">{{name}}</a>
-        </div>
-        <div class="navbar-collapse collapse">
-            <ul class="nav navbar-nav">
-                <li><a href="#">Home</a>
-                </li>
-                <li><a href="#skills">Skills</a>
-                </li>
-                <li><a href="#education">Education</a>
-                </li>
-                <li><a href="#projects">Projects</a>
-                </li>
-                <li><a href="#extra">Extra</a>
-                </li>
-                <li><a href="#webpresence">Web Presence</a>
-                </li>
-            </ul>
-            <ul class="nav navbar-nav navbar-right" ng-show="showRightNav">
-                <li><a target="_blank" ng-href="{{resumelink}}" ng-show="resumelink">Download Resume</a>
-                </li>
-                <li><a ng-href="{{default_email}}" ng-show="hasDefaultEmail">Mail me</a>
-                </li>
-            </ul>
+                <a class="navbar-brand visible-xs" href="#">{{name}}</a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="#">Home</a>
+                    </li>
+                    <li><a href="#skills">Skills</a>
+                    </li>
+                    <li><a href="#education">Education</a>
+                    </li>
+                    <li><a href="#projects">Projects</a>
+                    </li>
+                    <li><a href="#extra">Extra</a>
+                    </li>
+                    <li><a href="#contact">Contact</a>
+                    </li>
+                    <li><a href="#webpresence">Web Presence</a>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right" ng-show="showRightNav">
+                    <li><a target="_blank" ng-href="{{resumelink}}" ng-show="resumelink">Download Resume</a>
+                    </li>
+                    <li><a ng-href="{{default_email}}" ng-show="hasDefaultEmail">Mail me</a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </div>
-</div>
 
-<div class="container">
-    <div ng-controller="biocontroller">
-        <div class="jumbotron" id="home">
+    <div class="container">
+        <div ng-controller="biocontroller">
+            <div class="jumbotron" id="home">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <img ng-src="{{bio.photo_link}}" class="img-circle center-block profile-pic" alt="Profile picture">
+                        </div>
+                        <div class="col-sm-8">
+                            <h1>{{bio.name}}</h1>
+                            <p class="lead text-muted" ng-show="bio.tagline"><em>{{bio.tagline}}</em>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div ng-show="bio.aboutme">
+                <h1 class="page-header">About me</h1>
+                <div ng-repeat="chunk in bio.aboutme">
+                    <div ng-if="chunk.type === 'para'">
+                        <p ng-show="chunk.text">{{chunk.text}}</p>
+                    </div>
+                    <div ng-if="chunk.type === 'bullets'">
+                        <ul ng-if="chunk.points.length > 0">
+                            <li ng-repeat="point in chunk.points">{{point}}</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /container -->
+
+    <div class="container" ng-controller="skillscontroller" id="skills" ng-show="skills.categories">
+        <h1 class="page-header">Skills</h1>
+        <div ng-show="skills.areas_of_interest">
+            <strong>Areas of interest: </strong>
+            <em>{{skills.areas_of_interest.join(", ")}}</em>
+        </div>
+        <div class="top-padded">
+            <table class="table table-bordered">
+                <tbody>
+                    <tr ng-repeat="category in skills.categories">
+                        <th>{{category.category_name}}</th>
+                        <td>
+                            {{category.topics.join(", ")}}
+                            <div class="top-padded-less" ng-repeat="subcat in category.sub_categories">
+                                <strong>{{subcat.sub_category_name}}: </strong> {{subcat.topics.join(", ")}}
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <!-- /container -->
+
+    <div class="container" ng-controller="educationcontroller" id="education">
+        <h1 class="page-header">Education</h1>
+        <div ng-repeat="institution in education.institutions">
+            <h3><span data-toggle="tooltip" data-placement="bottom" title="{{institution.role}}" tooltip>{{institution.name}}</span><span class="text-muted pull-right"><em>({{institution.duration}})</em></span></h3>
+            <div class="container-fluid top-padded">
+                <div class="row">
+                    <div class="col-sm-9">
+                        <table class="table table-bordered">
+                            <tbody>
+                                <tr class="success" ng-show="institution.degree">
+                                    <th>Degree</th>
+                                    <td>{{institution.degree}}</td>
+                                </tr>
+                                <tr ng-if="institution.degree == '' && institution.role">
+                                    <th>Role</th>
+                                    <td>{{institution.role}}</td>
+                                </tr>
+                                <tr ng-show="institution.major">
+                                    <th>Major</th>
+                                    <td>{{institution.major}}</td>
+                                </tr>
+                                <tr ng-show="institution.minor">
+                                    <th>Minor</th>
+                                    <td>{{institution.minor}}</td>
+                                </tr>
+                                <tr ng-show="institution.gpa">
+                                    <th>GPA</th>
+                                    <td>{{institution.gpa}}</td>
+                                </tr>
+                                <tr ng-show="institution.courses">
+                                    <th>Courses</th>
+                                    <td>{{institution.courses.join(", ")}}</td>
+                                </tr>
+                                <tr ng-show="institution.location">
+                                    <th>Location</th>
+                                    <td>{{institution.location}}</td>
+                                </tr>
+                                <tr ng-show="institution.link">
+                                    <th>Link</th>
+                                    <td><a target="_blank" ng-href="{{institution.link}}">{{institution.link}}</a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="col-sm-3 hidden-xs">
+                        <img class="logo center-block" ng-show="institution.logo_link" ng-src="{{institution.logo_link}}" alt="logo" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /container -->
+
+    <div class="container" ng-controller="projectscontroller" id="projects">
+        <h1 class="page-header">Projects</h1>
+        <div ng-repeat="project in projects.projects">
+            <h3>{{project.name}}<span class="text-muted pull-right"><em>({{project.duration}})</em></span></h3>
+            <p class="lead text-muted" ng-show="project.tagline"><em>{{project.tagline}}</em>
+            </p>
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-sm-4">
-                        <img ng-src="{{bio.photo_link}}" class="img-circle center-block profile-pic"
-                             alt="Profile picture">
+                    <div class="col-sm-9">
+                        <table class="table table-bordered">
+                            <tbody>
+                                <tr ng-show="project.description">
+                                    <th>Description</th>
+                                    <td>
+                                        <div ng-repeat="chunk in project.description">
+                                            <div ng-if="chunk.type === 'para'">
+                                                <p ng-show="chunk.text">{{chunk.text}}</p>
+                                            </div>
+                                            <div ng-if="chunk.type === 'bullets'">
+                                                <ul ng-if="chunk.points.length > 0">
+                                                    <li ng-repeat="point in chunk.points">{{point}}</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr ng-repeat="weblink in project.web_links">
+                                    <th>{{weblink.title}}</th>
+                                    <td><a ng-href="{{weblink.link}}" target="_blank">{{weblink.link}}</a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
-                    <div class="col-sm-8">
-                        <h1>{{bio.name}}</h1>
-                        <p class="lead text-muted" ng-show="bio.tagline"><em>{{bio.tagline}}</em>
-                        </p>
+                    <div class="col-sm-3 hidden-xs">
+                        <img class="logo center-block" ng-show="project.logo_link" ng-src="{{project.logo_link}}" alt="logo" />
                     </div>
                 </div>
             </div>
         </div>
-        <div ng-show="bio.aboutme">
-            <h1 class="page-header">About me</h1>
-            <div ng-repeat="chunk in bio.aboutme">
-                <div ng-if="chunk.type === 'para'">
-                    <p ng-show="chunk.text">{{chunk.text}}</p>
-                </div>
-                <div ng-if="chunk.type === 'bullets'">
-                    <ul ng-if="chunk.points.length > 0">
-                        <li ng-repeat="point in chunk.points">{{point}}</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
     </div>
-</div>
-<!-- /container -->
+    <!-- /container -->
 
-<div class="container" ng-controller="skillscontroller" id="skills" ng-show="skills.categories">
-    <h1 class="page-header">Skills</h1>
-    <div ng-show="skills.areas_of_interest">
-        <strong>Areas of interest: </strong>
-        <em>{{skills.areas_of_interest.join(", ")}}</em>
-    </div>
-    <div class="top-padded">
-        <table class="table table-bordered">
-            <tbody>
-            <tr ng-repeat="category in skills.categories">
-                <th>{{category.category_name}}</th>
-                <td>
-                    {{category.topics.join(", ")}}
-                    <div class="top-padded-less" ng-repeat="subcat in category.sub_categories">
-                        <strong>{{subcat.sub_category_name}}: </strong>
-                        {{subcat.topics.join(", ")}}
+    <div class="container" id="extra" ng-controller="extracontroller">
+        <h1 class="page-header">Extra</h1>
+        <div class="row">
+            <div class="col-sm-9">
+                <div ng-show="extra.icpc">
+                    <div class="container-fluid top-padded">
+                        <h3>ACM - ICPC</h3>
+                        <table class="table table-bordered">
+                            <tbody>
+                                <tr>
+                                    <th>Year</th>
+                                    <th>Region</th>
+                                    <th>Rank</th>
+                                </tr>
+                                <tr ng-repeat="contest in extra.icpc">
+                                    <th>{{contest.year}}</th>
+                                    <td>{{contest.region}}</td>
+                                    <td>{{contest.rank}}</td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
-                </td>
-            </tr>
-            </tbody>
-        </table>
-    </div>
-</div>
-<!-- /container -->
-
-<div class="container" ng-controller="educationcontroller" id="education">
-    <h1 class="page-header">Education</h1>
-    <div ng-repeat="institution in education.institutions">
-        <h3><span data-toggle="tooltip" data-placement="bottom" title="{{institution.role}}" tooltip>{{institution.name}}</span><span
-                class="text-muted pull-right"><em>({{institution.duration}})</em></span></h3>
-        <div class="container-fluid top-padded">
-            <div class="row">
-                <div class="col-sm-9">
-                    <table class="table table-bordered">
-                        <tbody>
-                        <tr class="success" ng-show="institution.degree">
-                            <th>Degree</th>
-                            <td>{{institution.degree}}</td>
-                        </tr>
-                        <tr ng-if="institution.degree == '' && institution.role">
-                            <th>Role</th>
-                            <td>{{institution.role}}</td>
-                        </tr>
-                        <tr ng-show="institution.major">
-                            <th>Major</th>
-                            <td>{{institution.major}}</td>
-                        </tr>
-                        <tr ng-show="institution.minor">
-                            <th>Minor</th>
-                            <td>{{institution.minor}}</td>
-                        </tr>
-                        <tr ng-show="institution.gpa">
-                            <th>GPA</th>
-                            <td>{{institution.gpa}}</td>
-                        </tr>
-                        <tr ng-show="institution.courses">
-                            <th>Courses</th>
-                            <td>{{institution.courses.join(", ")}}</td>
-                        </tr>
-                        <tr ng-show="institution.location">
-                            <th>Location</th>
-                            <td>{{institution.location}}</td>
-                        </tr>
-                        <tr ng-show="institution.link">
-                            <th>Link</th>
-                            <td><a target="_blank" ng-href="{{institution.link}}">{{institution.link}}</a>
-                            </td>
-                        </tr>
-                        </tbody>
-                    </table>
-                </div>
-                <div class="col-sm-3 hidden-xs">
-                    <img class="logo center-block" ng-show="institution.logo_link" ng-src="{{institution.logo_link}}"
-                         alt="logo"/>
                 </div>
             </div>
         </div>
     </div>
-</div>
-<!-- /container -->
+    <!-- /container -->
 
-<div class="container" ng-controller="projectscontroller" id="projects">
-    <h1 class="page-header">Projects</h1>
-    <div ng-repeat="project in projects.projects">
-        <h3>{{project.name}}<span class="text-muted pull-right"><em>({{project.duration}})</em></span></h3>
-        <p class="lead text-muted" ng-show="project.tagline"><em>{{project.tagline}}</em>
-        </p>
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-sm-9">
-                    <table class="table table-bordered">
-                        <tbody>
-                        <tr ng-show="project.description">
-                            <th>Description</th>
-                            <td>
-                                <div ng-repeat="chunk in project.description">
-                                    <div ng-if="chunk.type === 'para'">
-                                        <p ng-show="chunk.text">{{chunk.text}}</p>
-                                    </div>
-                                    <div ng-if="chunk.type === 'bullets'">
-                                        <ul ng-if="chunk.points.length > 0">
-                                            <li ng-repeat="point in chunk.points">{{point}}</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr ng-repeat="weblink in project.web_links">
-                            <th>{{weblink.title}}</th>
-                            <td><a ng-href="{{weblink.link}}" target="_blank">{{weblink.link}}</a>
-                            </td>
-                        </tr>
-                        </tbody>
-                    </table>
-                </div>
-                <div class="col-sm-3 hidden-xs">
-                    <img class="logo center-block" ng-show="project.logo_link" ng-src="{{project.logo_link}}"
-                         alt="logo"/>
+    <div class="container" id="contact">
+        <h1 class="page-header">Contact</h1>
+        <div class="row">
+            <div class="col-sm-9">
+                <div>
+                    <div class="container-fluid top-padded">
+                        <h3>Emails</h3>
+                        <table class="table table-bordered">
+                            <tbody>
+                                <tr>
+                                    <th>Preferred</th>
+                                    <td><a href="mailto:dgodhia+website@cs.stonybrook.edu">dgodhia AT cs DOT stonybrook DOT edu</a></td>
+                                </tr>
+                                <tr>
+                                    <th>Alternate</th>
+                                    <td><a href="mailto:darshan1810+website@cs.stonybrook.edu">darshan1810 AT gmail DOT com</a></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
-<!-- /container -->
+    <!-- /container -->
 
-<div class="container" id="extra" ng-controller="extracontroller">
-    <h1 class="page-header">Extra</h1>
-    <div class="row">
-        <div class="col-sm-9">
-            <div ng-show="extra.icpc">
-                <div class="container-fluid top-padded">
-                    <h3>ACM - ICPC</h3>
-                    <table class="table table-bordered">
-                        <tbody>
-                        <tr>
-                            <th>Year</th>
-                            <th>Region</th>
-                            <th>Rank</th>
-                        </tr>
-                        <tr ng-repeat="contest in extra.icpc">
-                            <th>{{contest.year}}</th>
-                            <td>{{contest.region}}</td>
-                            <td>{{contest.rank}}</td>
-                        </tr>
-                        </tbody>
-                    </table>
-                </div>
+    <div class="container" id="webpresence" ng-controller="webpresencecontroller">
+        <h1 class="page-header">Web Presence</h1>
+        <div class="row">
+            <div class="col-md-3 col-sm-6 col-xs-12 text-center webpresence-entry" ng-show="webpresence.linkedin">
+                <a ng-href="{{webpresence.linkedin}}" target="_blank">
+                    <div>
+                        <h3>Linked In</h3>
+                        <img src="images/webpresence_linkedin.png" alt="Linked in" class="logo" />
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-3 col-sm-6 col-xs-12 text-center webpresence-entry" ng-show="webpresence.github">
+                <a ng-href="{{webpresence.github}}" target="_blank">
+                    <div>
+                        <h3>Github</h3>
+                        <img src="images/webpresence_github.png" alt="Github" class="logo" />
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-3 col-sm-6 col-xs-12 text-center webpresence-entry" ng-show="webpresence.quora">
+                <a ng-href="{{webpresence.quora}}" target="_blank">
+                    <div>
+                        <h3>Quora</h3>
+                        <img src="images/webpresence_quora.png" alt="Quora" class="logo" />
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-3 col-sm-6 col-xs-12 text-center webpresence-entry" ng-show="webpresence.facebook">
+                <a ng-href="{{webpresence.facebook}}" target="_blank">
+                    <div>
+                        <h3>Facebook</h3>
+                        <img src="images/webpresence_facebook.png" alt="Facebook" class="logo" />
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-3 col-sm-6 col-xs-12 text-center webpresence-entry" ng-show="webpresence.twitter">
+                <a ng-href="{{webpresence.twitter}}" target="_blank">
+                    <div>
+                        <h3>Twitter</h3>
+                        <img src="images/webpresence_twitter.png" alt="Twitter" class="logo" />
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-3 col-sm-6 col-xs-12 text-center webpresence-entry" ng-show="webpresence.googleplus">
+                <a ng-href="{{webpresence.googleplus}}" target="_blank">
+                    <div>
+                        <h3>Google Plus</h3>
+                        <img src="images/webpresence_googleplus.png" alt="Google Plus" class="logo" />
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-3 col-sm-6 col-xs-12 text-center webpresence-entry" ng-repeat="site in webpresence.custom">
+                <a ng-href="{{site.link}}" target="_blank">
+                    <div>
+                        <h3>{{site.title}}</h3>
+                        <img ng-show="site.logo" ng-src="{{site.logo}}" alt="Custom Site" class="logo" />
+                        <img ng-hide="site.logo" src="./images/webpresence_placeholder_logo.png" alt="Custom Site" class="logo" />
+                    </div>
+                </a>
             </div>
         </div>
     </div>
-    <!--<div class="row">-->
-        <!--<div class="col-sm-9">-->
-            <!--<div ng-show="extra.icpc">-->
-                <!--<div class="container-fluid top-padded">-->
-                    <!--<h3>ACM - ICPC</h3>-->
-                    <!--<table class="table table-bordered">-->
-                        <!--<tbody>-->
-                        <!--<tr>-->
-                            <!--<th>Year</th>-->
-                            <!--<th>Region</th>-->
-                            <!--<th>Rank</th>-->
-                        <!--</tr>-->
-                        <!--<tr ng-repeat="contest in extra.icpc">-->
-                            <!--<th>{{contest.year}}</th>-->
-                            <!--<td>{{contest.region}}</td>-->
-                            <!--<td>{{contest.rank}}</td>-->
-                        <!--</tr>-->
-                        <!--</tbody>-->
-                    <!--</table>-->
-                <!--</div>-->
-            <!--</div>-->
-        <!--</div>-->
-    <!--</div>-->
-</div>
-<!-- /container -->
+    <!-- /container -->
 
-<div class="container" id="webpresence" ng-controller="webpresencecontroller">
-    <h1 class="page-header">Web Presence</h1>
-    <div class="row">
-        <div class="col-md-3 col-sm-6 col-xs-12 text-center webpresence-entry" ng-show="webpresence.linkedin">
-            <a ng-href="{{webpresence.linkedin}}" target="_blank">
-                <div>
-                    <h3>Linked In</h3>
-                    <img src="images/webpresence_linkedin.png" alt="Linked in" class="logo"/>
-                </div>
-            </a>
-        </div>
-        <div class="col-md-3 col-sm-6 col-xs-12 text-center webpresence-entry" ng-show="webpresence.github">
-            <a ng-href="{{webpresence.github}}" target="_blank">
-                <div>
-                    <h3>Github</h3>
-                    <img src="images/webpresence_github.png" alt="Github" class="logo"/>
-                </div>
-            </a>
-        </div>
-        <div class="col-md-3 col-sm-6 col-xs-12 text-center webpresence-entry" ng-show="webpresence.quora">
-            <a ng-href="{{webpresence.quora}}" target="_blank">
-                <div>
-                    <h3>Quora</h3>
-                    <img src="images/webpresence_quora.png" alt="Quora" class="logo"/>
-                </div>
-            </a>
-        </div>
-        <div class="col-md-3 col-sm-6 col-xs-12 text-center webpresence-entry" ng-show="webpresence.facebook">
-            <a ng-href="{{webpresence.facebook}}" target="_blank">
-                <div>
-                    <h3>Facebook</h3>
-                    <img src="images/webpresence_facebook.png" alt="Facebook" class="logo"/>
-                </div>
-            </a>
-        </div>
-        <div class="col-md-3 col-sm-6 col-xs-12 text-center webpresence-entry" ng-show="webpresence.twitter">
-            <a ng-href="{{webpresence.twitter}}" target="_blank">
-                <div>
-                    <h3>Twitter</h3>
-                    <img src="images/webpresence_twitter.png" alt="Twitter" class="logo"/>
-                </div>
-            </a>
-        </div>
-        <div class="col-md-3 col-sm-6 col-xs-12 text-center webpresence-entry" ng-show="webpresence.googleplus">
-            <a ng-href="{{webpresence.googleplus}}" target="_blank">
-                <div>
-                    <h3>Google Plus</h3>
-                    <img src="images/webpresence_googleplus.png" alt="Google Plus" class="logo"/>
-                </div>
-            </a>
-        </div>
-        <div class="col-md-3 col-sm-6 col-xs-12 text-center webpresence-entry" ng-repeat="site in webpresence.custom">
-            <a ng-href="{{site.link}}" target="_blank">
-                <div>
-                    <h3>{{site.title}}</h3>
-                    <img ng-show="site.logo" ng-src="{{site.logo}}" alt="Custom Site" class="logo"/>
-                    <img ng-hide="site.logo" src="./images/webpresence_placeholder_logo.png" alt="Custom Site"
-                         class="logo"/>
-                </div>
-            </a>
-        </div>
-    </div>
-</div>
-<!-- /container -->
-
-<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-<script src="./bower_components/jquery/dist/jquery.min.js"></script>
-<!-- Angular -->
-<script src="./bower_components/angular/angular.min.js"></script>
-<script src="./data/bio.js"></script>
-<script src="./data/skills.js"></script>
-<script src="./data/education.js"></script>
-<script src="./data/extra.js"></script>
-<script src="./data/workexperience.js"></script>
-<script src="./data/projects.js"></script>
-<script src="./data/webpresence.js"></script>
-<script src="./js/app.js"></script>
-<script src="./js/data.js"></script>
-<script src="./js/controllers.js"></script>
-<script src="./js/directives.js"></script>
-<!-- Include all compiled plugins (below), or include individual files as needed -->
-<script src="./bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-<script type="text/javascript">
-    $.ready(function () {
-        $('[data-toggle="tooltip"]').tooltip({
-            'placement': 'top'
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="./bower_components/jquery/dist/jquery.min.js"></script>
+    <!-- Angular -->
+    <script src="./bower_components/angular/angular.min.js"></script>
+    <script src="./data/bio.js"></script>
+    <script src="./data/skills.js"></script>
+    <script src="./data/education.js"></script>
+    <script src="./data/extra.js"></script>
+    <script src="./data/workexperience.js"></script>
+    <script src="./data/projects.js"></script>
+    <script src="./data/webpresence.js"></script>
+    <script src="./js/app.js"></script>
+    <script src="./js/data.js"></script>
+    <script src="./js/controllers.js"></script>
+    <script src="./js/directives.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="./bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        $.ready(function() {
+            $('[data-toggle="tooltip"]').tooltip({
+                'placement': 'top'
+            });
         });
-    });
-</script>
+    </script>
 </body>
 
 </html>

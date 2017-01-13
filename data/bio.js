@@ -15,5 +15,5 @@ var _bio = {
             "domain of Storage Systems under the guidance of Prof. Erez Zadok."
         }
     ],
-    // "default_email": "dgodhia AT cs DOT stonybrook DOT edu"
+    "default_email": "dgodhia AT cs DOT stonybrook DOT edu"
 };
