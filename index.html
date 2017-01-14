@@ -78,7 +78,7 @@
                 <h1 class="page-header">About me</h1>
                 <div ng-repeat="chunk in bio.aboutme">
                     <div ng-if="chunk.type === 'para'">
-                        <p ng-show="chunk.text">{{chunk.text}}</p>
+                        <p ng-bind-html="renderHtml(chunk.text)"></p>
                     </div>
                     <div ng-if="chunk.type === 'bullets'">
                         <ul ng-if="chunk.points.length > 0">
@@ -326,6 +326,13 @@
                     </div>
                 </a>
             </div>
+        </div>
+    </div>
+    <!-- /container -->
+
+    <div class="container" id="edited">
+        <div class="row page-header">
+            <p>Last edited on January 13, 2017 by Darshan Godhia</p>
         </div>
     </div>
     <!-- /container -->
