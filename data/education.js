@@ -6,7 +6,7 @@ var _education = {
             "degree": "Master of Science",
             "major": "Computer Science",
             "duration": "August, 2016 - Present",
-            "gpa": "3.75*",
+            "gpa": "3.75",
             "location": "Stony Brook, NY, USA",
             "courses": [
                 "Analysis of Algorithms",
@@ -14,7 +14,7 @@ var _education = {
                 "Offensive Security",
                 "Programming Complex Algorithms"
             ],
-            "link": "http://cs.stonybrook.edu",
+            "link": "https://www.cs.stonybrook.edu/",
             "logo_link": "./data/logos/sbu.jpg"
         },
         { 
@@ -24,18 +24,27 @@ var _education = {
             "major": "Computer Engineering",
             "duration": "August, 2012 - June, 2016",
             "gpa": "9.07/10",
-            "location": "Mumbai, India",
+            "location": "Mumbai, Maharashtra, India",
             "courses": [
                 "Machine Learning",
                 "Soft Computing",
-                "Data Structures",
-                "Analysis of Algorithms",
                 "Distributed Databases",
                 "Cryptography and System Security",
                 "Network Threats and Attacks",
                 "Artificial Intelligence",
-                "Data Warehousing and Management"
+                "Data Warehousing and Management",
+                "Software Engineering",
+                "Computer Networks",
+                "Operating Systems",
+                "Microprocessors",
+                "Discrete Mathematics",
+                "Theoretical Computer Science",
+                "Database Management Systems",
+                "Analysis of Algorithms",
+                "Data Structures",
+                "Object Oriented Programming"
             ],
+            "link": "http://comp.spit.ac.in/",
             "logo_link": "./data/logos/mu.png"
         },
         {
