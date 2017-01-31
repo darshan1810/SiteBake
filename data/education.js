@@ -12,7 +12,10 @@ var _education = {
                 "Analysis of Algorithms",
                 "Operating Systems",
                 "Offensive Security",
-                "Programming Complex Algorithms"
+                "Programming Complex Algorithms",
+                "Machine Learning",
+                "Probability and Statistics in Data Science",
+                "Parallel Programming"
             ],
             "link": "https://www.cs.stonybrook.edu/",
             "logo_link": "./data/logos/sbu.jpg"
@@ -54,7 +57,7 @@ var _education = {
             "major": "",
             "minor": "Computer Science",
             "duration": "May, 2010 - May, 2012",
-            "gpa": "83 %",
+            "gpa": "83%",
             "location": "Mumbai, India",
             "courses": [],
             "logo_link": "./data/logos/pace.jpeg"

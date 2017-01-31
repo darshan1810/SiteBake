@@ -36,8 +36,11 @@ angular.module('myApp.controllers', ['myApp.data'])
             $scope.workexperience = $workexperience;
         }
     ])
-    .controller('projectscontroller', ['$scope', 'projects',
-        function($scope, $projects) {
+    .controller('projectscontroller', ['$scope', 'projects', '$sce',
+        function($scope, $projects, $sce) {
+            $scope.renderHtml = function(htmlCode) {
+                return $sce.trustAsHtml(htmlCode);
+            };
             $scope.projects = $projects;
         }
     ])

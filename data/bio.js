@@ -15,6 +15,10 @@ var _bio = {
                 "I will be involved in research projects in the " +
                 "domain of Storage Systems under the guidance of " +
                 "<a href='http://www3.cs.stonybrook.edu/~ezk/'>Prof. Erez Zadok.</a>"
+        },
+        {
+            "type": "para",
+            "text": "Currently, I am a teaching assistant for <a href='http://www3.cs.stonybrook.edu/~ezk/cse376/' target='_blank'>CSE376 - Advanced Systems Programming in Unix\/C</a>."
         }
     ],
     "default_email": "dgodhia+website@cs.stonybrook.edu"

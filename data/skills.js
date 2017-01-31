@@ -15,7 +15,9 @@ var _skills = {
             "category_name": "Database technologies",
             "topics": [
                 "MySQL",
-                "SQL Server"
+                "SQL Server",
+                "PostresSQL",
+                "MongoDb"
             ]
         },
         {
@@ -24,6 +26,9 @@ var _skills = {
                 "HTML5",
                 "CSS3",
                 "JavaScript",
+                "jQuery",
+                "PHP",
+                "AJAX",
             ],
             "sub_categories": [
                 {
@@ -41,6 +46,5 @@ var _skills = {
         "Security",
         "Algorithms",
         "Machine learning",
-        "AI"
     ]
 };

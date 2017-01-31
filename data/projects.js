@@ -55,6 +55,9 @@ var _projects = {
                         "Streamed and dumped tweets filtered with candidate names, for US presidential election.",
                         "Created a labelled dataset using a combination of Intensity Polarizer (Vader) and Manual labelling on clustered data.",
                         "Trained and compared performance of text based classifiers on the labelled dataset.",
+                        "Paper: J. Ramteke, S. Shah, D. Godhia and A. Shaikh,<a href='http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=7823280&isnumber=7823173' " +
+                        "target='_blank'> \"Election result prediction using Twitter sentiment analysis,\"</a> <em>2016 International Conference on Inventive Computation Technologies (ICICT)</em>, Coimbatore, India, 2016, pp. 1-5.",
+                        "DOI: <a href='https://doi.org/10.1109/INVENTIVE.2016.7823280' target='_blank'>10.1109/INVENTIVE.2016.7823280</a>"
                     ]
                 }
             ],
