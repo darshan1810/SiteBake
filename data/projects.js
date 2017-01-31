@@ -1,44 +1,24 @@
 var _projects = {
     "projects": [
         {
-            "name": "Per process system vector table",
-            "tagline": "Kernel programming to make system calls in Linux dynamic",
+            "name": "KaliDroid",
+            "tagline": "A penetration testing Android app",
             "description": [
                 {
                     "type": "para",
-                    "text": "Developed a Linux kernel-based system to support per-process system call vectors."
+                    "text": "Ported popular Kali Linux tools, for network based penetration testing for Android phones having root access."
                 },
 
                 {
                     "type": "bullets",
                     "points": [
-                        "Modified Linux kernel 4.6.0 to enable dynamic loading and unloading of system call vector tables as modules.",
-                        "Intercepted system calls; which allowed system users to override system calls and use a different set of system calls per process",
-                        "Handled special cases of vector table inheritance, e.g. clone"
+                        "Cross compiled Linux based tools for the Android Linux kernel.",
+                        "Provided python based tools with SL4A (Scripting Layer for Android).",
+                        "Provided Android GUI wrapper, for quick and simple execution of the pen-testing tools."
                     ]
                 }
             ],
-            "duration": "November, 2016 - December, 2016",
-        },
-        {
-            "name": "Automated ROP chain payload generator and tester",
-            "tagline": "ROP chain payload exploit generator to automate Buffer Overflow attacks",
-            "description": [
-                {
-                    "type": "para",
-                    "text": "Developed a Linux x86 binary file analyzer tool which generates exploits."
-                },
-
-                {
-                    "type": "bullets",
-                    "points": [
-                        "Scanned Linux x86 binary files to find ret2libc and ROP gadgets",
-                        "Generated exploits which would create input strings from chained ROP gadgets",
-                        "Made the exploit program stack executable, thereby allowing any user to add any additional payload"
-                    ]
-                }
-            ],
-            "duration": "August, 2016 - November, 2016",
+            "duration": "July, 2013 - Oct, 2013",
         },
         {
             "name": "Election Result Prediction using Data Mining and Sentiment Analysis",
@@ -64,25 +44,68 @@ var _projects = {
             "duration": "August, 2015 - March, 2016",
         },
         {
-            "name": "KaliDroid",
-            "tagline": "A penetration testing Android app",
+            "name": "Overriding global system call vector table in the Linux kernel",
+            "tagline": "Kernel programming to make system call vector table in Linux dynamic",
             "description": [
                 {
                     "type": "para",
-                    "text": "Ported popular Kali Linux tools, for network based penetration testing for Android phones having root access."
+                    "text": "Modified the Linux kernel to support per-process system call vector tables."
                 },
-                
+
                 {
                     "type": "bullets",
                     "points": [
-                        "Cross compiled Linux based tools for the Android Linux kernel.",
-                        "Provided python based tools with SL4A (Scripting Layer for Android).",
-                        "Provided Android GUI wrapper, for quick and simple execution of the pen-testing tools."
+                        "Modified Linux kernel 4.6.0 to enable dynamic loading and unloading of system call vector tables as modules, at runtime",
+                        "Intercepted system calls; which allowed system users to override system calls and use a different set of system calls per process",
+                        "Added support for user defined system calls",
+                        "Handled special cases of vector table inheritance, e.g. clone"
                     ]
                 }
             ],
-            "duration": "July, 2013 - Oct, 2013",
+            "duration": "November, 2016 - December, 2016",
         },
+        {
+            "name": "Trace and Replay of File System operations in the Linux kernel",
+            "tagline": "TRFS: A traceable, replayable, stackable file system",
+            "description": [
+                {
+                    "type": "para",
+                    "text": "Modified the existing stackable file system - wrapfs, to enable traceing and replaying functionality"
+                },
+
+                {
+                    "type": "bullets",
+                    "points": [
+                        "Created TRFS based on WrapFS, an existing stackable file system to log file system operations",
+                        "Added functionality to log file, inode, control operations on an existing file system, by mounting TRFS over it",
+                        "Also added functionality to check for consistency of the logging operations"
+                    ]
+                }
+            ],
+            "duration": "November, 2016 - December, 2016",
+        },
+        {
+            "name": "Automated ROP chain payload generator and tester",
+            "tagline": "ROP chain payload exploit generator to automate Buffer Overflow attacks",
+            "description": [
+                {
+                    "type": "para",
+                    "text": "Developed a Linux x86 binary file analyzer tool which generates exploits."
+                },
+
+                {
+                    "type": "bullets",
+                    "points": [
+                        "Scanned Linux x86 binary files to find ret2libc and ROP gadgets",
+                        "Generated exploits which would create input strings from chained ROP gadgets",
+                        "Made the exploit program stack executable, thereby allowing any user to add any additional payload"
+                    ]
+                }
+            ],
+            "duration": "August, 2016 - November, 2016",
+        },
+
+
         {
             "name": "Dermibot",
             "tagline": "Skin disease detection Android application using machine learning.",
