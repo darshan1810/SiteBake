@@ -18,8 +18,12 @@ var _bio = {
         },
         {
             "type": "para",
-            "text": "Currently, I am a teaching assistant for <a href='http://www3.cs.stonybrook.edu/~ezk/cse376/' target='_blank'>CSE376 - Advanced Systems Programming in Unix\/C</a>."
-        }
+            "text": "I was the teaching assistant for <a href='http://www3.cs.stonybrook.edu/~ezk/cse376/' target='_blank'>CSE376 - Advanced Systems Programming in Unix\/C</a>, in Spring 2017."
+        },
+	{
+	    "type": "para",
+	    "text": "Currently, I am a Software Engineering Intern at Google, in the YouTube Engineering team, at <a href='https://careers.google.com/locations/san-bruno/' target='_blank'>San Bruno</a>. <br/> I am researching custom memory allocators for a low footprint browser platform for the <a href='https://www.youtube.com/tv' target='_blank'>YouTube HTML5 application</a> on TVs <a href='http://cobalt.foo/' target='_blank'>(Cobalt)</a>."
+	}
     ],
     "default_email": "dgodhia+website@cs.stonybrook.edu"
 };
